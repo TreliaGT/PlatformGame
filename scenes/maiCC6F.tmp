@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8yaka1oegemm"]
+
+[ext_resource type="PackedScene" uid="uid://dc5tcek8ej442" path="res://scenes/main_menu.tscn" id="1_0qk7h"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_eqk83"]
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("ava_level")]
+script = ExtResource("1_eqk83")
+ava_level = [null]
+
+[node name="UIMENU" type="CanvasLayer" parent="."]
+
+[node name="MainMenu" parent="UIMENU" instance=ExtResource("1_0qk7h")]
+
+[node name="Node2D" type="Node2D" parent="."]

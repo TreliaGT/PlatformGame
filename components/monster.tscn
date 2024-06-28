@@ -1,0 +1,90 @@
+[gd_scene load_steps=12 format=3 uid="uid://uj62hnvu8rib"]
+
+[ext_resource type="Texture2D" uid="uid://dh4t4iwf1k1sg" path="res://assets/spritesheet.png" id="1_x3krg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgdcq"]
+atlas = ExtResource("1_x3krg")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o452o"]
+atlas = ExtResource("1_x3krg")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbvqu"]
+atlas = ExtResource("1_x3krg")
+region = Rect2(128, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vlam"]
+atlas = ExtResource("1_x3krg")
+region = Rect2(144, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wujib"]
+atlas = ExtResource("1_x3krg")
+region = Rect2(128, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hygn1"]
+atlas = ExtResource("1_x3krg")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5158"]
+atlas = ExtResource("1_x3krg")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47rds"]
+atlas = ExtResource("1_x3krg")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u0p25"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgdcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o452o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbvqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vlam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wujib")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hygn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5158")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47rds")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8e15"]
+size = Vector2(10, 9)
+
+[node name="monster" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u0p25")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_w8e15")
