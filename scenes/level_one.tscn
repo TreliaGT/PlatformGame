@@ -205,6 +205,16 @@ collision_layer = 65
 collision_mask = 65
 
 [node name="Sign" parent="." instance=ExtResource("6_bchnf")]
-position = Vector2(409, 530)
+position = Vector2(409, 531)
 scale = Vector2(2, 2)
 description = "Welcome To This game"
+
+[node name="Sign2" parent="." instance=ExtResource("6_bchnf")]
+position = Vector2(789, 531)
+scale = Vector2(2, 2)
+description = "Watch The Death Pit"
+
+[node name="Sign3" parent="." instance=ExtResource("6_bchnf")]
+position = Vector2(1018, 531)
+scale = Vector2(2, 2)
+description = "ooo Jumpy Mushroom"

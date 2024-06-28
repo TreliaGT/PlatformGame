@@ -13,9 +13,6 @@ func _on_body_entered(body):
 	if body is Player:
 		print("Enter")
 		tooltip.visible = true
-
-
-func _on_body_exited(body):
-	if body is Player:
-		print("Exit")
+		await get_tree().create_timer(5).timeout
 		tooltip.visible = false
+
