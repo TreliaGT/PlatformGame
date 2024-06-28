@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bd306nftuetcu"]
+[gd_scene load_steps=10 format=3 uid="uid://bd306nftuetcu"]
 
 [ext_resource type="Script" path="res://scripts/classes/level.gd" id="1_ej326"]
 [ext_resource type="Texture2D" uid="uid://dh4t4iwf1k1sg" path="res://assets/spritesheet.png" id="1_oxp2o"]
 [ext_resource type="PackedScene" uid="uid://c67dcja4f0day" path="res://components/player.tscn" id="2_chvn1"]
 [ext_resource type="PackedScene" uid="uid://b0oqm2q57dxr7" path="res://components/danagerzone.tscn" id="4_u75u0"]
 [ext_resource type="PackedScene" uid="uid://c5t7pt5oxs1ql" path="res://components/mushroom.tscn" id="5_iwf26"]
+[ext_resource type="PackedScene" uid="uid://bvkk7rlyqxo00" path="res://components/sign.tscn" id="6_bchnf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aydhb"]
 resource_name = "tileset"
@@ -202,3 +203,8 @@ scale = Vector2(2, 2)
 disable_mode = 2
 collision_layer = 65
 collision_mask = 65
+
+[node name="Sign" parent="." instance=ExtResource("6_bchnf")]
+position = Vector2(409, 530)
+scale = Vector2(2, 2)
+description = "Welcome To This game"
